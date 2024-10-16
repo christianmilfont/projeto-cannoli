@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Cabecalho from "@/app/Components/Cabecalho";
+import Rodape from "@/app/Components/Rodape";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +30,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Cabecalho/>
         {children}
+        <Rodape/>
       </body>
     </html>
   );
